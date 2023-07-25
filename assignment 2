@@ -1,0 +1,106 @@
+#1
+def compareStrings(garlands, flowers):
+    garlands_set = set(garlands)  # Convert garlands string to a set for faster lookups
+    count = 0
+
+    for flower in flowers:
+        if flower in garlands_set:
+            count += 1
+
+    return count
+
+# Test cases
+print(compareStrings("aA", "aAAbbbs"))  # Output: 3
+print(compareStrings("*Z*", "22"))      # Output: 0
+
+
+
+#5a
+number =int(input("Enter the number:"))
+i=1
+while i <= 12:
+    mul = i*number
+    print(f'{i} *{number} ={mul}')
+    i = i+1
+    
+    
+#5b
+print("Guess the secrete number between 1 and 100:")
+secret_number = 10
+yes = True
+while yes:
+    guessed = int(input("Enter the guess number"))
+    if guessed > secret_number:
+       print("The number is too high!")
+    elif guessed <secret_number:
+       print("The number is too low!")
+    else:
+       print("hurrey! you got it correct!")
+       
+       
+#6
+def is_vowel(char):
+    vowels = ['a','e','i','o','u']
+    cha = char.lower()
+    if cha in vowels:
+        return True
+    else:
+        return False
+    
+    
+#2
+def grade_score(score):
+    print('''This function takes the numerical score and
+    returns the grade scored and the grade pont\n''')
+    mark = int(score)
+    if mark <= 100 and mark >= 85:
+        grade_point ='The score is A+ and the grade point is 4'
+    elif mark < 85 and mark >= 80:
+        grade_point='The score is A and the grade point is 4'
+    elif mark < 80 and mark >= 75:
+        grade_point='The score is B+ and the grade point is 3.5'
+    elif mark < 75 and mark >= 70:
+        grade_point='The score is B and the grade point is 3'
+    elif mark < 70 and mark >= 65:
+        grade_point='The score is C+ and the grade point is 2.5'
+    elif mark < 65 and mark >= 60:
+        grade_point='The score is C and the grade point is 2'
+    elif mark < 60 and mark >= 55:
+        grade_point='The score is D and the grade point is 1.5'
+    elif mark < 55 and mark >= 0:
+        grade_point = 'Fail!'
+    else:
+        grade_point = 'Wrong socre input'
+    return grade_point
+
+def honorDetector(CGPA):
+    print('This function determines your honor\n')
+    cp = float(CGPA)
+    
+    if cp <=4 and cp >= 3.85:
+        honor = 'Summa Cum Laude'
+    elif cp < 3.85 and cp >= 3.7:
+        honor = 'Mangna Cum Laude'
+    elif cp < 3.7 and cp >= 3.50:
+        honor = 'Cum Laude'
+    elif cp <3.5 and cp >= 1:
+        honor = 'No honor'
+    else:
+        honor = 'wrong CGPA'
+    return honor
+
+#3
+def summation(number):
+    total = 0
+    num = int(number)
+    for i in range(1, num+1):
+        total = total + i
+    print(f' The number is {num} and the sum is {total}')
+    return total
+
+#4
+def customlen(string):
+    count = 0
+    for i in string:
+        count += 1
+    return count
